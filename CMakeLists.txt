@@ -7,4 +7,7 @@ add_executable(Lab_OOP5 main.cpp
         human.h
         robot.h
         aiunit.h
-        cyborg.h)
+        cyborg.h
+        machine.h
+        organism.h
+        advanced_cyborg.h)

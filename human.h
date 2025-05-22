@@ -10,15 +10,17 @@ protected:
     int age;
 
 public:
-    Human(std::string name, int age) : name(name), age(age) {
-        std::cout << "Human constructor\n";
+    Human(std::string name_val = "HumanBase", int age_val = 0) : name(name_val), age(age_val) {
+        std::cout << "Human constructor (" << name << ", " << age << ")" << std::endl;
     }
     virtual ~Human() {
-        std::cout << "human destructor\n";
+        std::cout << "Human destructor (" << name << ")" << std::endl;
     }
-    void Identify() const {
-        std::cout << "I am " << name << ", " << age << " years old.\n";
+    virtual void Identify() const {
+        std::cout << "I am a Human named " << name << ", " << age << " years old." << std::endl;
     }
+    std::string GetName() const { return name; }
+    int GetAge() const { return age; }
 };
 
 #endif // HUMAN_H
